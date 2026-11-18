@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gekko.co.id | Website profesional, proses lebih gesit</title>
+<meta name="description" content="Gekko.co.id membuat company profile dan landing page yang rapi, responsif, dan sesuai kebutuhan bisnis.">
+<link rel="icon" href="assets/mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;500&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke isi</a>
+
+<div class="bar field field-navy"><a href="#kontak">Website lama ketinggalan? Ceritakan ke kami.</a></div>
+
+<header class="head">
+  <nav class="dock" aria-label="Utama" data-dock>
+    <a class="dock__logo" href="#beranda" aria-label="Gekko.co.id, ke beranda"><img src="assets/logo.png" width="470" height="170" alt="Gekko.co.id"></a>
+    <button class="dock__menu" type="button" aria-expanded="false" aria-controls="dock-links" data-menu>Menu</button>
+    <div class="dock__panel" id="dock-links">
+      <ul class="dock__l" role="list">
+        <li><a href="#cerita">Cerita kami</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+      </ul>
+      <div class="dock__r">
+        <ul role="list"><li><a href="#klien">Klien</a></li></ul>
+        <a class="btn btn--sm" href="#kontak">Konsultasi</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section id="beranda" class="hero field field-navy" aria-labelledby="judul">
+  <figure class="hero__photo" data-slot="hero-photo" data-alt="Orang bekerja dengan laptop di ruang kerja bersama yang terang">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/CM_Deep_Ellum_12122018-28_%281%29.jpg/1280px-CM_Deep_Ellum_12122018-28_%281%29.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/CM_Deep_Ellum_12122018-28_%281%29.jpg/960px-CM_Deep_Ellum_12122018-28_%281%29.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/CM_Deep_Ellum_12122018-28_%281%29.jpg/1280px-CM_Deep_Ellum_12122018-28_%281%29.jpg 1280w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/CM_Deep_Ellum_12122018-28_%281%29.jpg/1920px-CM_Deep_Ellum_12122018-28_%281%29.jpg 1920w" sizes="100vw" width="5472" height="3648" alt="Orang bekerja dengan laptop di ruang kerja bersama yang terang" fetchpriority="high">
+  </figure>
+  <div class="container hero__grid">
+    <div class="hero__head">
+      <h1 id="judul"><span>Website profesional.</span> <span>Proses lebih gesit.</span></h1>
+      <p class="lead">Company profile yang rapi, responsif, dan sesuai kebutuhan bisnis.</p>
+      <div class="actions">
+        <a class="btn" href="#kontak">Konsultasi Website</a>
+        <a class="btn btn--quiet" href="#portofolio">Lihat Portofolio</a>
+      </div>
+    </div>
+    <div class="hero__visual field field-navy">
+      <form class="try" data-try onsubmit="return false">
+        <label class="field-input" for="nama-usaha"><span>Ketik nama usahamu</span>
+          <input id="nama-usaha" name="nama-usaha" type="text" autocomplete="organization" maxlength="40" placeholder="Nama usahamu" data-try-name>
+        </label>
+        <fieldset class="chips" data-try-sector>
+          <legend class="visually-hidden">Jenis usaha</legend>
+          <input type="radio" name="sektor" id="s-klinik" value="klinik" checked><label for="s-klinik">Klinik</label>
+          <input type="radio" name="sektor" id="s-kontraktor" value="kontraktor"><label for="s-kontraktor">Kontraktor</label>
+          <input type="radio" name="sektor" id="s-kafe" value="kafe"><label for="s-kafe">Kafe</label>
+        </fieldset>
+      </form>
+      <figure class="hero__fig" aria-label="Contoh tampilan company profile yang berubah mengikuti nama usahamu">
+        <div class="hero__slot" data-slot="hero-preview" data-kind="product" data-alt="Tangkapan layar website company profile buatan Gekko">
+          <div class="pv" data-pv data-scheme="mist" aria-hidden="true">
+            <div class="pv__bar"><span class="pv__brand" data-pv-brand>Nama usahamu</span><span class="pv__links" data-pv-links><span>Layanan</span><span>Dokter</span><span>Kontak</span></span></div>
+            <div class="pv__main"><p class="pv__h" data-pv-h>Nama usahamu</p><p class="pv__sub" data-pv-sub>Perawatan yang tenang untuk keluarga.</p><span class="pv__btn" data-pv-cta>Buat janji</span></div>
+            <ul class="pv__cards" data-pv-cards><li>Pemeriksaan</li><li>Perawatan</li><li>Konsultasi</li></ul>
+            <img class="pv__photo" data-pv-photo src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Stethoscope_and_Laptop_Computer_-_Nci-vol-9713-300.jpg/1280px-Stethoscope_and_Laptop_Computer_-_Nci-vol-9713-300.jpg" width="1280" height="853" alt="">
+          </div>
+        </div>
+        <figcaption class="hero__cap">Rancangan contoh, berubah saat kamu mengetik.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="cerita" class="story" aria-labelledby="h-cerita">
+  <div class="container story__grid">
+    <div class="story__head">
+      <img class="story__mark" src="assets/mark.png" width="191" height="142" alt="">
+      <h2 id="h-cerita" data-reveal>Empat hal yang kami pegang.</h2>
+      <p class="story__note">Dari konsultasi sampai tayang, empat hal ini yang kami jaga. Cerita awal Gekko: <span class="fill" data-fill="cerita">menyusul dari tim Gekko</span>.</p>
+    </div>
+    <ol class="values">
+      <li class="value"><h3>Modern</h3><p>Tampilan segar, enak dibuka dari ponsel.</p></li>
+      <li class="value"><h3>Gesit</h3><p>Proses ringkas dari konsultasi sampai tayang.</p></li>
+      <li class="value"><h3>Jelas</h3><p>Bahasa yang mudah, tanpa istilah yang bikin pusing.</p></li>
+      <li class="value"><h3>Profesional</h3><p>Company profile rapi yang membuat bisnismu dipercaya.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="layanan" class="services" aria-labelledby="h-layanan">
+  <div class="container">
+    <div class="services__head">
+      <h2 id="h-layanan" data-reveal>Website apa yang kamu butuhkan?</h2>
+      <p class="services__note">Pilih satu, lalu centang halaman yang kamu mau. Ringkasannya tersusun di samping.</p>
+    </div>
+    <div class="services__grid">
+      <fieldset class="svc-list" data-svc>
+        <legend class="visually-hidden">Layanan</legend>
+        <div class="svc field field-turq"><input type="radio" name="layanan" id="l1" value="Company profile" checked><label for="l1"><span class="svc__t">Company profile</span><span class="svc__d">Halaman utuh tentang bisnismu, dari siapa kamu sampai cara menghubungi.</span><span class="svc__f">Cocok untuk klinik, kontraktor, sekolah.</span><span class="svc__tick" aria-hidden="true"></span></label></div>
+        <div class="svc svc--soft field"><input type="radio" name="layanan" id="l2" value="Landing page"><label for="l2"><span class="svc__t">Landing page</span><span class="svc__d">Satu halaman untuk satu tujuan, misalnya pendaftaran atau penawaran.</span><span class="svc__f">Cocok untuk kafe, toko, peluncuran.</span><span class="svc__tick" aria-hidden="true"></span></label></div>
+        <div class="svc field field-blue"><input type="radio" name="layanan" id="l3" value="Redesign website"><label for="l3"><span class="svc__t">Redesign website</span><span class="svc__d">Website lama dirapikan: tampilan, susunan, dan kecepatan.</span><span class="svc__f">Cocok untuk website yang sudah ada.</span><span class="svc__tick" aria-hidden="true"></span></label></div>
+        <div class="svc field field-navy"><input type="radio" name="layanan" id="l4" value="Perawatan website"><label for="l4"><span class="svc__t">Perawatan website</span><span class="svc__d">Pembaruan isi dan pemeriksaan rutin setelah tayang.</span><span class="svc__f">Cocok untuk website yang sudah tayang.</span><span class="svc__tick" aria-hidden="true"></span></label></div>
+      </fieldset>
+      <aside class="sum" aria-label="Ringkasan pilihanmu" data-sum>
+        <h3>Ringkasanmu</h3>
+        <p class="sum__line" data-sum-line aria-live="polite">Company profile</p>
+        <fieldset class="chips" data-pages>
+          <legend class="visually-hidden">Halaman yang kamu mau</legend>
+          <input type="checkbox" name="halaman" id="p1" value="Beranda" checked><label for="p1">Beranda</label>
+          <input type="checkbox" name="halaman" id="p2" value="Tentang" checked><label for="p2">Tentang</label>
+          <input type="checkbox" name="halaman" id="p3" value="Layanan" checked><label for="p3">Layanan</label>
+          <input type="checkbox" name="halaman" id="p4" value="Portofolio"><label for="p4">Portofolio</label>
+          <input type="checkbox" name="halaman" id="p5" value="Klien"><label for="p5">Klien</label>
+          <input type="checkbox" name="halaman" id="p6" value="Kontak" checked><label for="p6">Kontak</label>
+        </fieldset>
+        <p class="sum__pages" data-sum-pages aria-live="polite">4 halaman: Beranda, Tentang, Layanan, Kontak.</p>
+        <a class="btn" href="#kontak" data-carry>Bawa ke konsultasi</a>
+      </aside>
+    </div>
+    <h3 class="steps__h">Empat langkah dari ngobrol sampai tayang.</h3>
+    <ol class="steps">
+      <li><h3>Konsultasi</h3><p>Kita bahas kebutuhan dan isi websitemu.</p></li>
+      <li><h3>Rancangan</h3><p>Kamu lihat tampilannya sebelum dibangun.</p></li>
+      <li><h3>Pembangunan</h3><p>Rancangan jadi website yang responsif.</p></li>
+      <li><h3>Tayang</h3><p>Website online dan kamu tahu cara memakainya.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="portofolio" class="work field field-navy" aria-labelledby="h-work">
+  <div class="container">
+    <div class="work__head">
+      <div>
+        <h2 id="h-work" data-reveal>Contoh rancangan untuk berbagai usaha.</h2>
+        <p class="work__note">Ini rancangan contoh per sektor, bukan proyek klien. Klik satu untuk melihatnya lebih besar.</p>
+      </div>
+      <fieldset class="chips" data-filter>
+        <legend class="visually-hidden">Saring contoh</legend>
+        <input type="radio" name="saring" id="f0" value="" checked><label for="f0">Semua</label>
+        <input type="radio" name="saring" id="f1" value="Company profile"><label for="f1">Company profile</label>
+        <input type="radio" name="saring" id="f2" value="Landing page"><label for="f2">Landing page</label>
+      </fieldset>
+    </div>
+    <ul class="grid-work" data-grid>
+      <li data-kind="Company profile">
+        <div class="card" data-card data-title="Klinik" data-kind-label="Company profile">
+          <div class="card__slot" data-slot="project-klinik" data-kind="product" data-alt="Tangkapan layar website klinik buatan Gekko">
+            <div class="pv pv--compact" data-scheme="mist" aria-hidden="true">
+              <div class="pv__bar"><span class="pv__brand">Nama klinik</span><span class="pv__links"><span>Layanan</span><span>Dokter</span><span>Kontak</span></span></div>
+              <div class="pv__main"><p class="pv__h">Nama klinik</p><p class="pv__sub">Perawatan yang tenang untuk keluarga.</p><span class="pv__btn">Buat janji</span></div>
+              <ul class="pv__cards"><li>Pemeriksaan</li><li>Perawatan</li><li>Konsultasi</li></ul>
+              <img class="pv__photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Stethoscope_and_Laptop_Computer_-_Nci-vol-9713-300.jpg/1280px-Stethoscope_and_Laptop_Computer_-_Nci-vol-9713-300.jpg" width="1280" height="853" alt="" loading="lazy">
+            </div>
+          </div>
+          <span class="card__meta"><button class="card__t" type="button" aria-label="Buka contoh rancangan Klinik">Klinik.</button><span class="card__k">Company profile</span></span>
+        </div>
+      </li>
+      <li data-kind="Company profile">
+        <div class="card" data-card data-title="Kontraktor" data-kind-label="Company profile">
+          <div class="card__slot" data-slot="project-kontraktor" data-kind="product" data-alt="Tangkapan layar website kontraktor buatan Gekko">
+            <div class="pv pv--compact" data-scheme="blue" aria-hidden="true">
+              <div class="pv__bar"><span class="pv__brand">Nama kontraktor</span><span class="pv__links"><span>Layanan</span><span>Proyek</span><span>Kontak</span></span></div>
+              <div class="pv__main"><p class="pv__h">Nama kontraktor</p><p class="pv__sub">Pembangunan yang terencana, hasil yang rapi.</p><span class="pv__btn">Minta penawaran</span></div>
+              <ul class="pv__cards"><li>Renovasi</li><li>Bangun baru</li><li>Interior</li></ul>
+              <img class="pv__photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hallstadt_Bahnhof_ABS_N%C3%BCrnberg-Ebensfeld-20210328-RM-111554.jpg/1280px-Hallstadt_Bahnhof_ABS_N%C3%BCrnberg-Ebensfeld-20210328-RM-111554.jpg" width="1280" height="960" alt="" loading="lazy">
+            </div>
+          </div>
+          <span class="card__meta"><button class="card__t" type="button" aria-label="Buka contoh rancangan Kontraktor">Kontraktor.</button><span class="card__k">Company profile</span></span>
+        </div>
+      </li>
+      <li data-kind="Landing page">
+        <div class="card" data-card data-title="Kafe" data-kind-label="Landing page">
+          <div class="card__slot" data-slot="project-kafe" data-kind="product" data-alt="Tangkapan layar website kafe buatan Gekko">
+            <div class="pv pv--compact" data-scheme="turq" aria-hidden="true">
+              <div class="pv__bar"><span class="pv__brand">Nama kafe</span><span class="pv__links"><span>Menu</span><span>Cerita</span><span>Lokasi</span></span></div>
+              <div class="pv__main"><p class="pv__h">Nama kafe</p><p class="pv__sub">Kopi enak, tempat yang nyaman.</p><span class="pv__btn">Lihat menu</span></div>
+              <ul class="pv__cards"><li>Kopi</li><li>Makanan</li><li>Pesan antar</li></ul>
+              <img class="pv__photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg/1280px-Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg" width="1280" height="964" alt="" loading="lazy">
+            </div>
+          </div>
+          <span class="card__meta"><button class="card__t" type="button" aria-label="Buka contoh rancangan Kafe">Kafe.</button><span class="card__k">Landing page</span></span>
+        </div>
+      </li>
+      <li data-kind="Company profile">
+        <div class="card" data-card data-title="Sekolah" data-kind-label="Company profile">
+          <div class="card__slot" data-slot="project-sekolah" data-kind="product" data-alt="Tangkapan layar website sekolah buatan Gekko">
+            <div class="pv pv--compact" data-scheme="mist" aria-hidden="true">
+              <div class="pv__bar"><span class="pv__brand">Nama sekolah</span><span class="pv__links"><span>Program</span><span>Guru</span><span>Daftar</span></span></div>
+              <div class="pv__main"><p class="pv__h">Nama sekolah</p><p class="pv__sub">Belajar dengan suasana yang hangat.</p><span class="pv__btn">Daftar sekarang</span></div>
+              <ul class="pv__cards"><li>Program</li><li>Kegiatan</li><li>Pendaftaran</li></ul>
+              <img class="pv__photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Salle_de_lecture_Bibliotheque_Sainte-Genevieve_n03.jpg/1280px-Salle_de_lecture_Bibliotheque_Sainte-Genevieve_n03.jpg" width="1280" height="850" alt="" loading="lazy">
+            </div>
+          </div>
+          <span class="card__meta"><button class="card__t" type="button" aria-label="Buka contoh rancangan Sekolah">Sekolah.</button><span class="card__k">Company profile</span></span>
+        </div>
+      </li>
+      <li data-kind="Landing page">
+        <div class="card" data-card data-title="Toko" data-kind-label="Landing page">
+          <div class="card__slot" data-slot="project-toko" data-kind="product" data-alt="Tangkapan layar website toko buatan Gekko">
+            <div class="pv pv--compact" data-scheme="cyan" aria-hidden="true">
+              <div class="pv__bar"><span class="pv__brand">Nama toko</span><span class="pv__links"><span>Produk</span><span>Cara pesan</span><span>Kontak</span></span></div>
+              <div class="pv__main"><p class="pv__h">Nama toko</p><p class="pv__sub">Barang pilihan untuk kebutuhan harian.</p><span class="pv__btn">Pesan sekarang</span></div>
+              <ul class="pv__cards"><li>Produk</li><li>Kategori</li><li>Pesan</li></ul>
+              <img class="pv__photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/D%C3%B6rfleins_T%C3%B6pferei_D%C3%B6ppmann-20190714-RM-194552.jpg/1280px-D%C3%B6rfleins_T%C3%B6pferei_D%C3%B6ppmann-20190714-RM-194552.jpg" width="1280" height="812" alt="" loading="lazy">
+            </div>
+          </div>
+          <span class="card__meta"><button class="card__t" type="button" aria-label="Buka contoh rancangan Toko">Toko.</button><span class="card__k">Landing page</span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="klien" class="clients" aria-labelledby="h-klien">
+  <div class="container">
+    <h2 id="h-klien" data-reveal>Klien yang sudah jalan bareng.</h2>
+    <ul class="wall" data-wall>
+      <li class="wall__fill"><span class="fill" data-fill="klien">Logo klien menyusul</span></li>
+      <li class="wall__try">
+        <form data-wall-form onsubmit="return false">
+          <label class="field-input" for="nama-klien"><span>Taruh namamu di sini</span>
+            <input id="nama-klien" name="nama-klien" type="text" autocomplete="organization" maxlength="30" placeholder="Nama usahamu">
+          </label>
+          <p class="help" data-wall-help aria-live="polite"></p>
+        </form>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="tanya" class="faq" aria-labelledby="h-tanya">
+  <div class="container faq__grid">
+    <div class="faq__head">
+      <h2 id="h-tanya" data-reveal>Tanya jawab.</h2>
+      <figure class="faq__photo" data-slot="faq-photo" data-alt="Tangan menulis catatan di buku di meja kerja">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg/1280px-Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg/960px-Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg/1280px-Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg 1280w" sizes="(min-width: 60rem) 30vw, 100vw" width="6016" height="4016" alt="Tangan menulis catatan di buku di meja kerja" loading="lazy" style="object-position: 40% 50%">
+      </figure>
+    </div>
+    <div class="faq__list">
+      <details><summary>Apa yang perlu saya siapkan?</summary><p>Logo, foto, dan gambaran isi tiap halaman. Belum lengkap juga tidak apa-apa, kita susun bareng saat konsultasi.</p></details>
+      <details><summary>Bisa mulai dari website lama?</summary><p>Bisa. Layanan redesign merapikan tampilan, susunan, dan kecepatan website yang sudah ada.</p></details>
+      <details><summary>Apakah nyaman dibuka dari ponsel?</summary><p>Ya. Setiap rancangan dibuat responsif, jadi enak dibuka dari ponsel maupun komputer.</p></details>
+      <details><summary>Setelah tayang, siapa yang mengurus?</summary><p>Ada layanan perawatan: pembaruan isi dan pemeriksaan rutin, supaya websitemu tetap segar.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="contact field field-blue" aria-labelledby="h-kontak">
+  <div class="container contact__grid">
+    <div>
+      <h2 id="h-kontak" data-reveal>Yuk, ngobrol dulu.</h2>
+      <p class="lead">Ceritakan bisnismu, kita mulai dari sana.</p>
+      <p class="contact__alt">Atau langsung ke <span class="fill" data-fill="kontak">nomor WhatsApp atau email Gekko</span>.</p>
+    </div>
+    <form class="form" data-form data-endpoint="" novalidate>
+      <div class="form__row">
+        <label class="field-input" for="f-nama"><span>Nama</span><input id="f-nama" name="nama" type="text" autocomplete="name" required></label>
+        <label class="field-input" for="f-usaha"><span>Nama usaha</span><input id="f-usaha" name="usaha" type="text" autocomplete="organization"></label>
+      </div>
+      <label class="field-input" for="f-kontak"><span>Email atau WhatsApp</span><input id="f-kontak" name="kontak" type="text" inputmode="email" autocomplete="email" required></label>
+      <label class="field-input" for="f-butuh"><span>Kebutuhan</span>
+        <select id="f-butuh" name="kebutuhan"><option>Company profile</option><option>Landing page</option><option>Redesign website</option><option>Perawatan website</option><option>Belum yakin</option></select>
+      </label>
+      <label class="field-input" for="f-pesan"><span>Pesan</span><textarea id="f-pesan" name="pesan" rows="4"></textarea></label>
+      <div class="actions"><button class="btn" type="submit">Kirim konsultasi</button></div>
+      <p class="help" id="form-help" data-form-help aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot field field-navy">
+  <div class="container">
+    <div class="foot__grid">
+      <a class="foot__plate" href="#beranda" aria-label="Gekko.co.id, kembali ke atas"><img src="assets/logo.png" width="470" height="170" alt="Gekko.co.id"></a>
+      <nav class="foot__col" aria-label="Jelajahi">
+        <h2 class="foot__h">Jelajahi.</h2>
+        <ul role="list">
+          <li><a href="#cerita">Cerita kami</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#klien">Klien</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <nav class="foot__col" aria-label="Layanan">
+        <h2 class="foot__h">Layanan.</h2>
+        <ul role="list">
+          <li><a href="#layanan">Company profile</a></li>
+          <li><a href="#layanan">Landing page</a></li>
+          <li><a href="#layanan">Redesign website</a></li>
+          <li><a href="#layanan">Perawatan website</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="foot__word" aria-hidden="true">Gekko.co.id</p>
+    <p class="foot__credits" data-credits>Foto: <a href="https://commons.wikimedia.org/wiki/File:CM_Deep_Ellum_12122018-28_(1).jpg">Thecommondesk</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Stethoscope_and_Laptop_Computer_-_Nci-vol-9713-300.jpg">Daniel Sone</a> (domain publik), <a href="https://commons.wikimedia.org/wiki/File:Hallstadt_Bahnhof_ABS_N%C3%BCrnberg-Ebensfeld-20210328-RM-111554.jpg">Ermell</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg">Andy Li</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:Salle_de_lecture_Bibliotheque_Sainte-Genevieve_n03.jpg">Marie-Lan Nguyen</a> (CC BY 2.0 fr), <a href="https://commons.wikimedia.org/wiki/File:D%C3%B6rfleins_T%C3%B6pferei_D%C3%B6ppmann-20190714-RM-194552.jpg">Ermell</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Writing_in_a_notebook_with_a_feather_pen_while_enjoying_coffee_at_a_desk_surrounded_by_flowers.jpg">Shixart1985</a> (CC BY 2.0), semuanya dari Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<dialog class="detail" id="detail" aria-labelledby="detail-title" data-detail>
+  <div class="detail__slot" data-slot="detail-preview" data-kind="product" data-alt="Tangkapan layar contoh rancangan yang dipilih"></div>
+  <div class="detail__foot">
+    <h3 id="detail-title" data-detail-title>Contoh rancangan</h3>
+    <div class="actions">
+      <a class="btn" href="#kontak" data-detail-use>Mau yang seperti ini</a>
+      <button class="btn btn--quiet" type="button" data-detail-close>Tutup</button>
+    </div>
+  </div>
+</dialog>
+
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+<script src="app.js" defer></script>
+</body>
+</html>

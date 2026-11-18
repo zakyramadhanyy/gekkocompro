@@ -1,0 +1,30 @@
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1440px; --gutter: 40px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  /* brand colours, from the user's guideline v1.0 (hex in comments); faces and corners follow the user-named reference (watchhouse.com): a serif display, a light sans body, square corners */
+  --color-navy: oklch(21.5% 0.056 251);        /* #031A32 */
+  --color-cyan: oklch(70% 0.143 233);          /* #05ACE8 */
+  --color-turquoise: oklch(77.7% 0.122 202);   /* #34CDD7 */
+  --color-blue: oklch(48.4% 0.193 260);        /* #0755C9 */
+  --color-mist: oklch(97.4% 0.008 242);        /* #F2F7FB */
+  /* roles, light ground by default; .field-* blocks remap them */
+  --color-paper: var(--color-mist); --color-paper-2: oklch(94.6% 0.012 242); --color-paper-3: oklch(91.5% 0.018 242);
+  --color-ink: var(--color-navy); --color-ink-2: oklch(34% 0.05 251); --color-muted: oklch(46% 0.045 251);
+  --color-rule: oklch(86% 0.02 242);
+  --color-accent: var(--color-turquoise); --color-accent-ink: var(--color-navy); --color-focus: var(--color-blue);
+  --font-display: "Newsreader", "Source Serif 4", ui-serif, Georgia, serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-body);
+  --radius-card: 0px; --radius-input: 0px; --radius-pill: 0px; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.02em; --display-weight: 500; --body-weight: 300;
+}
+
+/* theme blocks: each field remaps the roles, so every component follows its ground */
+.field-navy { --color-paper: var(--color-navy); --color-paper-2: oklch(26% 0.055 251); --color-paper-3: oklch(31% 0.055 251); --color-ink: var(--color-mist); --color-ink-2: oklch(88% 0.02 242); --color-muted: oklch(76% 0.04 242); --color-rule: oklch(36% 0.05 251); --color-focus: var(--color-cyan); }
+.field-turq { --color-paper: var(--color-turquoise); --color-paper-2: oklch(72% 0.12 202); --color-paper-3: oklch(67% 0.12 202); --color-ink: var(--color-navy); --color-ink-2: oklch(28% 0.05 251); --color-muted: oklch(30% 0.055 251); --color-rule: oklch(58% 0.1 204); --color-accent: var(--color-navy); --color-accent-ink: var(--color-mist); --color-focus: var(--color-navy); }
+.field-blue { --color-paper: var(--color-blue); --color-paper-2: oklch(43% 0.19 260); --color-paper-3: oklch(38% 0.17 260); --color-ink: var(--color-mist); --color-ink-2: oklch(94% 0.012 242); --color-muted: oklch(88% 0.03 242); --color-rule: oklch(62% 0.12 260); --color-focus: var(--color-turquoise); }
