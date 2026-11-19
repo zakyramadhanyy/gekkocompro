@@ -273,9 +273,10 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
 .HomeFeaturedProjectItem:nth-child(1){z-index:10}.HomeFeaturedProjectItem:nth-child(2){z-index:20}.HomeFeaturedProjectItem:nth-child(3){z-index:30}
 .HomeFeaturedProjectItem-inner{position:relative;display:flex;flex-direction:column;justify-content:space-between;height:100%;width:100%}
 .HomeFeaturedProjectItem-background{position:absolute;inset:0}
-.HomeFeaturedProjectItem-background.--pink{background:var(--sky)}
-.HomeFeaturedProjectItem-background.--orange{background:var(--turq)}
-.HomeFeaturedProjectItem-background.--green{background:var(--cyan)}
+.HomeFeaturedProjectItem-background.--pink{background:#72B5E7}   /* Tanding Sport */
+.HomeFeaturedProjectItem-background.--orange{background:#AD000A}   /* Daya Dimensi: dark red, so its text is white (see .--ink-light) */
+.HomeFeaturedProjectItem.--ink-light .--dark{color:var(--white)}
+.HomeFeaturedProjectItem-background.--green{background:#FF4928}   /* Think Egg Head */
 .HomeFeaturedProjectItem-imageContainer{position:relative;z-index:2;display:block;flex:none;width:100%;aspect-ratio:1280/720;max-height:70vh;transform-origin:top left}
 .HomeFeaturedProjectItem-image{position:absolute;inset:0;overflow:hidden}
 .HomeFeaturedProjectItem-image img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
@@ -284,6 +285,7 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
 .HomeFeaturedProjectItem-year{font-size:1rem;font-weight:500;margin-right:35%}
 .HomeFeaturedProjectItem-details{display:flex;align-items:center;width:100%}
 .HomeFeaturedProjectItem-detail{width:50%}
+.HomeFeaturedProjectItem-detail.--baseline{text-align:right}   /* the description sits flush to the right edge on every tile */
 .HomeFeaturedProjectItem-titleContainer{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
 .HomeFeaturedProjectItem-button{position:absolute;right:1rem;bottom:1rem;z-index:3}
 .HomeFeaturedProjectItem-buttonMobile,.HomeFeaturedProjectItem-catMobile{display:none}
@@ -383,8 +385,9 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
 .TheFooter-infosContact .InfosContact-col:nth-child(even){align-items:flex-end;text-align:right}
 .TheFooter-infosContact .InfosContact-col.--address,.TheFooter-infosContact .InfosContact-col.--mails{margin-right:0}
 .TheFooter-infosContact .InfosContact-col.--legals{grid-column:1/-1}
-.TheFooter-bottom{display:flex;align-items:flex-start;justify-content:center;height:10rem;overflow:hidden}
-.TheFooter-letters.Letters{gap:1.5rem;justify-content:center;width:100%;fill:var(--white);aspect-ratio:785/413;flex:none}
+/* the word is full height (785/413) but only a horizontal slice of its middle is shown: a 2880x438 strip, cropped top and bottom */
+.TheFooter-bottom{display:flex;align-items:flex-start;justify-content:center;height:15.2vw;overflow:hidden}
+.TheFooter-letters.Letters{gap:1.5rem;justify-content:center;width:100%;margin-top:-9.2vw;fill:var(--white);aspect-ratio:785/413;flex:none}   /* margin-top picks which slice shows: here the one centred about a third down the letters */
 .InfosContact-copyright{margin-top:1rem;color:rgba(255,255,255,.8)}
 
 /* ============================================================
@@ -438,8 +441,13 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
   .HomeFeaturedProjects-items{display:flex;height:100vh}
   .HomeFeaturedProjects-itemsInner{display:flex}
   .HomeFeaturedProjectItem{width:66.6vw;height:100vh;transform:scale(var(--s,1))}
-  .HomeFeaturedProjectItem-details{width:100%}
-  .HomeFeaturedProjectItem-detail{width:50%}
+  /* header row on desktop: year at the left, category exactly centred on the tile, description at the right */
+  .HomeFeaturedProjectItem-contentHeader{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+  .HomeFeaturedProjectItem-year{margin:0}
+  .HomeFeaturedProjectItem-details{display:contents}
+  .HomeFeaturedProjectItem-detail{width:auto}
+  .HomeFeaturedProjectItem-detail.--cat{grid-column:2;text-align:center}
+  .HomeFeaturedProjectItem-detail.--baseline{grid-column:3;text-align:right}
   .HomeFeaturedProjectItem-button .AppButton{transform:scale(1)}
   .HomeProjects::before{display:block;content:"";position:absolute;left:0;right:0;bottom:0;top:100vh;background:var(--cyan)}
   .HomeProjects-items{background:transparent;padding:0}
@@ -494,14 +502,14 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
   .HomeAgency-listTitleWrap{margin-top:.5rem;width:65%}
   .HomeAgency-listText{width:56%;margin-bottom:10.5rem}
   .HomeFooter{padding:13rem 2rem 4.8rem}
-  .TheFooter{padding:0 3rem;height:85vh}
+  .TheFooter{padding:0 3rem;height:auto}
   .TheFooter-infosContact{display:flex;margin-bottom:3rem;padding:6rem 0 3rem}
   .TheFooter-infosContact::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:rgba(255,255,255,.7)}
   .TheFooter-infosContact .InfosContact{display:flex;width:100%;max-width:none;gap:0;justify-content:space-between}
   .TheFooter-infosContact .InfosContact-col{padding:0}
   .TheFooter-infosContact .InfosContact-col:nth-child(even){align-items:flex-start;text-align:left}
   .TheFooter-infosContact .InfosContact-col.--legals{grid-column:auto}
-  .TheFooter-bottom{height:auto;margin-top:2rem}
+  .TheFooter-bottom{margin-top:2rem}
   .TheFooter-letters.Letters{gap:2rem;width:100%}
 }
 @media (min-width:1080px) and (max-width:1439px){.HomeExpertises-head{top:10vh}}
@@ -673,7 +681,9 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
       <div class="InfosContact-col --socials"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Facebook</a></div>
       <div class="InfosContact-col --legals"><a href="#">Legal notice</a><div class="InfosContact-copyright AppSmallText-1">Gekko © 2026</div></div>
     </div></div>
-    <p class="TheFooter-credits">Photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:P059743-876254.jpg">Bogdan Hoyaux / European Commission</a> (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Wikidatacon_ux_participatorydesignworkshop_02.jpg">Jan Dittrich (WMDE)</a> (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Computer_repair_in_progress.jpg">Vintechcomputerservices</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Programmer_at_work_(Unsplash).jpg">Crew crew</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:NOIRLab_HQ_Server_Racks_(6V6A0395-CC).jpg">NOIRLab/NSF/AURA/T. Slovinský</a> (CC BY 4.0). Project images: <a href="https://commons.wikimedia.org/wiki/File:D%C3%B6rfleins_T%C3%B6pferei_D%C3%B6ppmann-20190714-RM-194552.jpg">Ermell</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:DSCF1079_A_cozy_vintage_shop_interior_filled_with_glass_bottles_wooden_cabinets_and_retro_soda_signs_-_evoking_a_nostalgic_corner_store_from_another_era.jpg">PattayaPatrol</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Fish_farming_on_%C3%98ksfjorden_in_Loppa,_Troms_og_Finnmark,_Norway,_2022_August.jpg">Ximonic (Simo Räsänen)</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Sydney_(AU),_Opera_House_--_2019_--_3054.jpg">Dietmar Rabich</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Studio_Lighting_Equipment_WMDE_IMG_3259_edit.jpg">Christoph Braun</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:DZ6_3557_Sun-drenched_poolside_palms_overlooking_the_calm_blue_sea_at_Klaeng_Kachet_Rayong_-_a_perfect_tropical_escape.jpg">PattayaPatrol</a> (CC BY-SA 4.0). Images were cropped.</p>
+    <!-- photo credits removed for now (CC BY / CC BY-SA photos from Wikimedia Commons need attribution before this goes public); to restore, put this back as <p class="TheFooter-credits">:
+    Photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:P059743-876254.jpg">Bogdan Hoyaux / European Commission</a> (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Wikidatacon_ux_participatorydesignworkshop_02.jpg">Jan Dittrich (WMDE)</a> (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Computer_repair_in_progress.jpg">Vintechcomputerservices</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Programmer_at_work_(Unsplash).jpg">Crew crew</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:NOIRLab_HQ_Server_Racks_(6V6A0395-CC).jpg">NOIRLab/NSF/AURA/T. Slovinský</a> (CC BY 4.0). Project images: <a href="https://commons.wikimedia.org/wiki/File:D%C3%B6rfleins_T%C3%B6pferei_D%C3%B6ppmann-20190714-RM-194552.jpg">Ermell</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:DSCF1079_A_cozy_vintage_shop_interior_filled_with_glass_bottles_wooden_cabinets_and_retro_soda_signs_-_evoking_a_nostalgic_corner_store_from_another_era.jpg">PattayaPatrol</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Fish_farming_on_%C3%98ksfjorden_in_Loppa,_Troms_og_Finnmark,_Norway,_2022_August.jpg">Ximonic (Simo Räsänen)</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Sydney_(AU),_Opera_House_--_2019_--_3054.jpg">Dietmar Rabich</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Studio_Lighting_Equipment_WMDE_IMG_3259_edit.jpg">Christoph Braun</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:DZ6_3557_Sun-drenched_poolside_palms_overlooking_the_calm_blue_sea_at_Klaeng_Kachet_Rayong_-_a_perfect_tropical_escape.jpg">PattayaPatrol</a> (CC BY-SA 4.0). Images were cropped.
+    -->
     <div class="TheFooter-bottom"><div class="Letters --white TheFooter-letters" data-letters></div></div>
   </div></footer>
 
@@ -685,14 +695,14 @@ body.is-locked .TheHeader.--isShow .TheHeader-logo{opacity:0}   /* the open menu
    DATA (placeholders in place of the CMS content of the original)
    ============================================================ */
 const FEATURED = [
-  { year:'2026', cat:'Web & mobile app', base:'Tournament platform for padel and sport communities', title:'Tanding Sport', size:'72px', img:'assets/tanding-sport.png', alt:'Tanding Sport tournament dashboard on a laptop and the mobile app', slug:'pink',   c:'#D3E2F8' },
-  { year:'2025', cat:'Corporate website', base:'People performance and HR consultancy', title:'Daya Dimensi', img:'assets/portfolio-people.jpg', w:1920, h:1080, alt:'Daya Dimensi corporate website, shown on a laptop', slug:'orange', c:'#8FE5EA' },
-  { year:'2025', cat:'Corporate website', base:'Branding and creative agency',          title:'Think Egg Head', img:'assets/portfolio-brand.jpg',  w:1920, h:1080, alt:'Think Egg Head website with a large animated word and client work around it, shown on a monitor', slug:'green',  c:'#6FCFF2' }
+  { year:'2026', cat:'Web & mobile app', base:'Sport Communities', title:'Tanding Sport', size:'72px', img:'assets/tanding-sport.jpg', w:1920, h:1080, alt:'Tanding Sport app screens on two phones lying on a green court', slug:'pink',   c:'#D3E2F8' },
+  { year:'2025', cat:'Corporate website', base:'HR Consultancy', title:'Daya Dimensi', size:'72px', light:true, img:'assets/portfolio-people.jpg', w:1920, h:1080, alt:'Daya Dimensi corporate website, shown on a laptop', slug:'orange', c:'#8FE5EA' },
+  { year:'2025', cat:'Corporate website', base:'Branding and creative agency',          title:'Think Egg Head', size:'72px', img:'assets/portfolio-brand.jpg',  w:1920, h:1080, alt:'Think Egg Head website with a large animated word and client work around it, shown on a monitor', slug:'green',  c:'#6FCFF2' }
 ];
 const LIST = [
-  ['E-commerce','2025','Delta Editions','#DCE8F5','assets/proj-1.jpg','Shelves of handmade clay teapots in a shop'],
-  ['Art direction','2020','Echo Store','#B7CFF3','assets/proj-2.jpg','A vintage corner store with glass bottles and wooden cabinets'],
-  ['Art direction','2023','Fjord','#BDEFF3','assets/proj-3.jpg','A calm Norwegian fjord with mountains reflected in the water'],
+  ['Energy Sustainability','2026','Solusi Environment Asia','#DCE8F5','assets/proj-1.jpg','Solusi Environment Asia website showing wind turbines, shown on a laptop on moss',true],
+  ['Company Profile','2026','Smart Reader','#B7CFF3','assets/proj-2.jpg','Smart Reader company profile website shown on a laptop',true],
+  ['Service Invitation','2026','Jade Invitation','#BDEFF3','assets/proj-3.jpg','Jade Invitation wedding invitation website shown on a laptop',true],
   ['Art direction','2025','Gala Agency','#CFEFF8','assets/proj-4.jpg','The sail-shaped roofs of the Sydney Opera House'],
   ['Art direction','2024','Halo Studio','#9FDDF5','assets/proj-5.jpg','Hands setting up a softbox in a photo studio'],
   ['Art direction','2022','Ibis House','#C9DAF7','assets/proj-6.jpg','A person holding out a phone showing the Ibis House app',true],
@@ -719,7 +729,7 @@ const btn = (label, cls, extra='') => `<a class="AppButton ${cls} ${extra}" href
 
   // featured items
   document.querySelector('[data-featured]').innerHTML = FEATURED.map((p,i)=>`
-    <div class="HomeFeaturedProjectItem"><div class="HomeFeaturedProjectItem-inner">
+    <div class="HomeFeaturedProjectItem${p.light ? ' --ink-light' : ''}"><div class="HomeFeaturedProjectItem-inner">
       <div class="HomeFeaturedProjectItem-background --${p.slug}"></div>
       <a class="HomeFeaturedProjectItem-imageContainer" href="#"><div class="HomeFeaturedProjectItem-image AppImage">${p.img ? `<img src="${p.img}" width="${p.w || 1211}" height="${p.h || 681}" alt="${p.alt}">` : `<div class="ph" style="--c:${p.c}" data-label="project image 16:9"></div>`}</div></a>
       <div class="HomeFeaturedProjectItem-content">
